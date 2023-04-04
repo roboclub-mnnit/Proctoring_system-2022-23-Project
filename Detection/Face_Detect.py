@@ -33,6 +33,10 @@ def face_dec(frame):
                            print('Multiple face for 4 sec')
                            data.multi4 = data.multi4 + 1
                          print("Multiple Face Detected from Harcascade")
+                         if(data.img_mul<=4):
+                          data.mul_img.append('ResultAssets/Multiple_Face/frame' + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg")
+                          cv2.imwrite( 'ResultAssets/Multiple_Face/frame' + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+                          data.img_mul = data.img_mul + 1
                  if(count == 1):
                         data.check = False      
                          

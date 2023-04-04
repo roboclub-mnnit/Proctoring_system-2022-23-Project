@@ -53,9 +53,10 @@ def face2(frame):
       print("User missing")
       if(data.end_miss - data.start_miss >= 3):
           data.usermiss = data.usermiss + 1
-          data.img1 = 'ResultAssets/User_Miss/frame' + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg"
-          cv2.imwrite( 'ResultAssets/User_Miss/frame' + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
-
+          if(data.pic_taken<=4):
+           data.img.append('ResultAssets/User_Miss/frame' + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg")
+           cv2.imwrite( 'ResultAssets/User_Miss/frame' + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+           data.pic_taken = data.pic_taken + 1
           print(data.usermiss)
           data.check_miss = False
       

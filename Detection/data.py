@@ -32,6 +32,8 @@ checkR = False
 # Multiple Face
 
 multiple_count = 0
+mul_img = []
+img_mul = 0
 # multiple face for time interval more than 4 sec
 multi4 = 0
 ismulti = False
@@ -52,7 +54,8 @@ start_miss = time.mktime(time.localtime())
 end_miss =  time.mktime(time.localtime())
 usermiss = 0
 check_miss = False
-img1=''
+img = []
+pic_taken = 0
 
 
 

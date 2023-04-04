@@ -14,6 +14,13 @@ def pdf_gen():
 
 
 
+ 
+
+ pdf.image('Assets\Images\ICON2_img.jpg',x = pw/2, y = None, w = 20, h = 20, type = 'JPG')
+ pdf.set_font('Arial', '', 36)
+ pdf.cell(w=0, h=10,align='C', txt = "Proctify" + data.name,border=0, ln=1)
+ pdf.cell(w=0, h=10, txt = "",border=2, ln=1)
+ pdf.cell(w=0, h=10, txt = "",border=2, ln=1)
  pdf.set_font('Arial', '', 12)
  # for info of user
  pdf.cell(w=0, h=10, txt = "Name : " + data.name,border=1, ln=1)
@@ -54,7 +61,7 @@ def pdf_gen():
 
  if(data.usermiss!=0):
   pdf.cell(w=pw/2, h=10, txt = "User Out of Frame",border=1, ln=1)
-  pdf.image(data.img1,x = 10, y = None, w = pw/2, h = 40, type = 'JPG')
+  
   pdf.cell(w=0, h=10, txt = "",border=2, ln=1)
 
 # Multiple Face
@@ -65,7 +72,7 @@ def pdf_gen():
 
 # Tab Switch
  if(data.tabswitch == True):
-  pdf.set_fill_color(r=50,g=50,b=50)
+  pdf.set_fill_color(r=0,g=128,b=128)
   pdf.cell(w=0, h=10,fill=True, txt = "Tab Switch Detected",border=1, ln=1)
   for val in data.URL:
    pdf.cell(w=pw/2, h=10, txt =val,border=1, ln=1)
@@ -73,7 +80,8 @@ def pdf_gen():
   pdf.cell(w=0, h=10, txt = "",border=2, ln=1)
  
 # Background Apps
- pdf.set_fill_color(r=50,g=50,b=50)
+ pdf.set_fill_color(r=0,g=128,b=128)
+ 
  pdf.cell(w=0, h=10,fill=True, txt = "Background Apps Running",border=1, ln=1)
  for val in data.softwares:
   pdf.cell(w=pw/2, h=10, txt = val,border=1, ln=1)
@@ -87,7 +95,7 @@ def pdf_gen():
  pdf.cell(w=pw/2, h=10, txt = "Cell Phone Detected",border=1, ln=1)
 
  pdf.cell(w=0, h=10, txt = "",border=2, ln=1)
- pdf.set_fill_color(r=50,g=50,b=50)
+ pdf.set_fill_color(r=0,g=128,b=128)
  pdf.cell(w=pw/2, h=10,fill=True, txt = "Random Photo",border=1, ln=1) 
 
  pdf.image('Nature.jpg',x = 10, y = None, w = pw/2, h = 40, type = 'JPG')
@@ -102,3 +110,4 @@ def pdf_gen():
  pdf.output(f'./result.pdf','F')
  print('PDF Generated')
 
+pdf_gen()
