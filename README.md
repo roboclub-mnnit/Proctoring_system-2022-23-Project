@@ -4,7 +4,7 @@ Project Name : Proctify
 
 Proctify : An app built to detect any sort of malpractice while short online quizes and other exams
 
-Techstack : Python-38
+Techstack : Python
     
 Libraries : 
    Open-cv
@@ -30,6 +30,13 @@ Group Members:
    Peketi Sai Dheeraj
    Aditya Omar
    Arpit Mittal
+
+How To Run: 
+  -> Make a venv using Python -m venv venv
+  -> Activate the venv using venv/Scripts/activate
+  -> Install all the above mentioned libraries
+  -> Activate your MySQL
+  -> Start login.py
 
 
 
