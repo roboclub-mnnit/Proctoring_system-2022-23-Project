@@ -13,6 +13,7 @@ from Detection import running
 
 def window():
      win = Tk()
+     
 
 
      
