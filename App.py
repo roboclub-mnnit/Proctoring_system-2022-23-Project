@@ -10,13 +10,7 @@ from Detection import win_switch
 from Object import Object_Detector
 
 
-
-
 face_cap = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
-
-
-
-
 
 
  
@@ -33,7 +27,7 @@ class App:
  
          
          self.canvas = tkinter.Canvas(window, width = self.vid.width, height = self.vid.height)
-         self.canvas.place(x=0,y=0)
+         self.canvas.place(x=340,y=90)
          
          
          
